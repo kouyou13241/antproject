@@ -1,0 +1,64 @@
+@import '~antd/dist/antd.css';
+#container
+{
+  height:100%;
+}
+.content-title
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-box
+{
+ display:flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+.content-box-layer
+{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: flex-start;
+}
+.content-box-p
+{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.content-margin
+{
+ 
+  margin-bottom:15px;
+  margin-top:15px;
+}
+.para-mid
+{
+  font-size:18px;
+  margin-bottom: 0px;
+}
+.para-big
+{
+  font-size: 30px;
+}
+.site-badge-count-4 .ant-badge-count {
+  background-color: #fff;
+  color: #999;
+  box-shadow: 0 0 0 1px #d9d9d9 inset;
+  margin:5px;
+  margin-bottom: 8px;
+}
+.Subworkitem-title
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.Liststyle{
+  border-left-width:4px ;
+  border-left-color: #faad14;
+}
