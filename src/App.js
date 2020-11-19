@@ -9,6 +9,8 @@ import {
   Tabs,
   Progress,
   Collapse,
+  Tag, 
+  Button
 } from "antd";
 import {
   ReconciliationTwoTone,
@@ -23,12 +25,12 @@ import {
   SnippetsOutlined,
   PlusOutlined,
   DownOutlined,
+  CheckSquareOutlined,
 } from "@ant-design/icons";
 const { Panel } = Collapse;
 const { TabPane } = Tabs;
 const { Header, Content } = Layout;
 const {Item} =List;
-
 function App() {
   return (
     <Layout style={{ height: "100%" }}>
@@ -74,7 +76,7 @@ function App() {
         </Row>
       </Header>
       <Content
-        style={{ height:'100%',margin: "10px", backgroundColor: "#ffffff", padding: "30px" }}
+        style={{margin: "10px", backgroundColor: "#ffffff", padding: "30px" }}
       >
         <div className="content-title">
           <div className="para-big content-margin">项目模块</div>
@@ -117,7 +119,7 @@ function App() {
             </Col>
             <Col span={5}>
               <div className="content-box-layer">
-                <CalendarOutlined style={{ fontSize: "50px" }} />
+                  <Button shape="circle" size="large"  icon={<CalendarOutlined/> }></Button>
                 <div className="content-box-p">
                   <p className="para-mid">10月29日</p>
                   <p
@@ -134,7 +136,7 @@ function App() {
             </Col>
             <Col span={5}>
               <div className="content-box-layer">
-                <CarryOutOutlined style={{ fontSize: "50px" }} />
+              <Button shape="circle" size="large"  icon={<CarryOutOutlined/> }></Button>
                 <div className="content-box-p">
                   <p className="para-mid">11月7日</p>
                   <p
@@ -164,21 +166,9 @@ function App() {
                 <Row>
                   <Col span={5} offset={1}>
                     <div className="content-margin">优先级</div>
-                    <div
-                      style={{
-                        border: "10 10 10 10",
-                        backgroundColor: "#ffa940",
-                        borderRadius: "5px",
-                        color: "white",
-                        width: "50px",
-                        height: "25px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      普通
-                    </div>
+                   
+                      <Tag color="#fa8c16">普通</Tag>
+                  
                   </Col>
                   <Col span={5}>
                     <div className="content-box-layer"></div>
@@ -247,14 +237,13 @@ function App() {
                 </div>
                 <Collapse bordered={true} defaultActiveKey={["1"]} className='Collapsestyle'>
                   <Panel header="任务" key="1">
-                    <List bordered={true} className='Listhover' >
+                    <List bordered={true} className='Listhover' style={{borderLeftColor:'#d46b08'}} >
+                      <Item >
+                      <CheckSquareOutlined style={{color:'#52c41a'}}/> test1
+                      </Item>
                       <Item >
                          test1
                       </Item>
-                      <Item>
-                        test2
-                      </Item>
-                    
                     </List>
                   </Panel>
                 </Collapse>
